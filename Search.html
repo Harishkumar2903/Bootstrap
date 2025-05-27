@@ -1,0 +1,362 @@
+<html>
+
+<head>
+    <title>Search</title>
+    <script src="https://kit.fontawesome.com/8c88d9587a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="D:\Web Development\V S CODE\FRONTEND PROJECT\index.css">
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100%;">
+    <div class="main-content">
+        <ul class="navbar flex">
+            <div class="navitem">
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\index.html"><i
+                            class="fa-solid fa-house"></i><span class="nav-name">Home</span></a></li>
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Movies.html"><i
+                            class="fa-solid fa-film"></i><span class="nav-name">Movies</span></a></li>
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\WebSeries.html"><i
+                            class="fa-solid fa-video"></i><span class="nav-name">Web Series</span></a></li>
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Wishlists.html"><i
+                            class="fa-solid fa-heart"></i><span class="nav-name">Wishlists</span></a></li>
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Search.html"><i
+                            class="fa-solid fa-magnifying-glass"></i><span class="nav-name">Search</span></a></li>
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Subscriptions.html"><i
+                            class="fa-solid fa-crown"></i><span class="nav-name">Subscriptions</span></a></li>
+                <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\SignUpPage.html"><i
+                            class="fa-solid fa-circle-user"></i><span class="nav-name">Sign In</span></a></li>
+            </div>
+        </ul>
+
+        <div class="flex">
+            <h2 class="sitename"><img src="logo90.png">CINEPHILE</h2>
+        </div>
+
+        <div class="searchbar flex">
+            <input type="text" id="searchInput" placeholder="Search Movies / Web Series">
+            <button onclick="searchMovies()"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
+        </div>
+
+        <section class="cont-lr">
+            <h4 class="flex">Search Results</h4>
+            <div class="cardcont-lr flex" id="resultArea"></div>
+        </section>
+    </div>
+
+
+    <footer class="flex">
+        <ul class="footeritem">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Support Us</a></li>
+        </ul>
+        <div class="footeritem">
+            <h4>Follow Us</h4>
+            <i class="fa-brands fa-x-twitter fa-xl"></i>
+            <i class="fa-brands fa-instagram fa-xl"></i>
+            <i class="fa-brands fa-square-facebook fa-xl"></i>
+        </div>
+        <ul class="footeritem">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><i class="fa-regular fa-copyright"></i>2025 All Rights Reserved</li>
+        </ul>
+    </footer>
+
+
+
+    <script>
+        var movieList = [
+            {
+                image: "sp thumbnail.jpg",
+                title: "Soorarai Pottru",
+                genre: "Action, Tamil",
+                overview: "A determined villager challenges the aviation industry's elite by pursuing his vision of affordable air travel for all, despite numerous obstacles and setbacks",
+            },
+            {
+                image: "hit thumbnail.jpg",
+                title: "HIT - The Third Case",
+                genre: "Crime Thriller, Telugu",
+                overview: "Arjun Sarkaar, a top HIT officer from Visakhapatnam, is sent to Jammu and Kashmir to investigate a series of brutal murders. As he pursues a group of elusive killers, the case tests his skills and mental strength.",
+            },
+            {
+                image: "hf-thumbnail.jpg",
+                title: "Housefull 5",
+                genre: "Comedy, Romance, Hindi",
+                overview: "Three couples who get separated from each other due to an evil ploy, reincarnate after 600 years and meet each other as history repeats itself again and their respective partners get mixed up this time.",
+            },
+            {
+                image: "fx-thumbnail.jpg",
+                title: "Fast X",
+                genre: "Action, English",
+                overview: "Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.",
+            },
+            {
+                image: "suzhal2-tn.jpg",
+                title: "Suzhal 2 - The Vortex",
+                genre: "Thriller, Tamil",
+                overview: "In a small South Indian town, a seemingly routine minor case explodes into a twisted crime thriller that rips apart its social fabric.",
+            },
+            {
+                image: "luc-tn.jpg",
+                title: "Love Under Construction",
+                genre: "Comedy, Malayalam",
+                overview: "Vinod is ready to build his dream house. But is he ready to face the hurdles in his path?",
+            },
+            {
+                image: "dabba-cartel-tn.jpg",
+                title: "Dabba Cartel",
+                genre: "Crime, Drama, Hindi",
+                overview: "In VivaLife Society, men and women lead parallel lives - one caught in a pharma investigation, the other in drug peddling through a dabba delivery business.",
+            },
+            {
+                image: "sg2-tn.jpg",
+                title: "Squid Game 2",
+                genre: "Thriller, English",
+                overview: "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes 45.6 billion-won prize at stake.",
+            },
+            {
+                image: "yn-tn.jpg",
+                title: "Yaavarum Nalam",
+                genre: "Horror, Tamil",
+                overview: "When an engineer and family move into a new apartment on the 13th floor, he comes across a daily soap on TV that closely mirrors the happenings in his household.",
+            },
+            {
+                image: "ave-tn.jpg",
+                title: "Aavesham",
+                genre: "Action, Malayalam",
+                overview: "Three teenagers reach Bangalore for their engineering degree and gets involved in a fight with seniors. They find a local gangster named Ranga to help them take revenge.",
+            },
+            {
+                image: "chup-tn1.jpg",
+                title: "Chup",
+                genre: "Crime Thriller, Hindi",
+                overview: "A lonesome florist with a new-found love interest and a psychopath killer who targets film critics in Mumbai. Are the two related? Inspector Arvind Mathur and Dr. Zenobia are about to find out.",
+            },
+            {
+                image: "tit-tn.jpg",
+                title: "Titanic",
+                genre: "Rom - Com, English",
+                overview: "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+            },
+            {
+                image: "d16-tn.jpg",
+                title: "Dhuruvangal Pathinaaru - D16",
+                genre: "Crime Thriller, Tamil",
+                overview: "A police officer retires after an accident during a case investigation. Years later, he is forced to relive the past as he narrates the story to his friend's son.",
+            },
+            {
+                image: "okk-tn.jpg",
+                title: "O Kadhal Kanmani",
+                genre: "Rom - Com, Tamil",
+                overview: "Two young lovers are compatible in every way - they even agree that marriage is futile. However, their emotions are not so easily managed, especially when they witness the unconditional love of the older couple with whom they live.",
+            },
+            {
+                image: "b2-tn.jpg",
+                title: "Baahubali 2- The Conclusion",
+                genre: "Action, Telugu",
+                overview: "Amarendra Baahubali, the heir apparent to the throne of Mahishmati, finds his life and relationships endangered as his adoptive brother Bhallaladeva conspires to claim the throne.",
+            },
+            {
+                image: "bb-tn.jpg",
+                title: "Bang Bang",
+                genre: "Action, Hindi",
+                overview: "A young bank receptionist gets mixed up with Rajveer Nanda, a man who has a mysterious background.",
+            },
+            {
+                image: "jw4-tn.jpg",
+                title: "John Wick- Chapter 4",
+                genre: "Action, English",
+                overview: "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+            },
+            {
+                image: "d2-tn.jpg",
+                title: "Drishyam 2",
+                genre: "Crime Thriller, Malayalam",
+                overview: "A man goes to extreme lengths to save his family from punishment after the family commits an accidental crime.",
+            },
+            {
+                image: "follow-tn.jpg",
+                title: "Following",
+                genre: "Crime Thriller, English",
+                overview: "A mystery thriller about a real estate agent who secretly enters clients' homes and becomes obsessed with a deceptive social media influencer. The film explores themes of obsession, identity and the dark side of social media.",
+            },
+            {
+                image: "andha-tn.jpg",
+                title: "Andhaghaaram",
+                genre: "Horror, Tamil",
+                overview: "As a blind librarian, dispirited cricketer and desolate psychiatrist each seek retribution and release, their lives overlap under eerie influences.",
+            },
+            {
+                image: "brama-tn.jpg",
+                title: "Bramayugam",
+                genre: "Horror, Malayalam",
+                overview: "Thevan, a folk singer of the Paanan caste, has a fateful encounter when escaping slavery, leading to him discovering an ancient traditional mansion altering his destiny.",
+            },
+            {
+                image: "tum-tn.jpg",
+                title: "Tumbbad",
+                genre: "Horror, Hindi",
+                overview: "A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born.",
+            },
+            {
+                image: "co2-tn.jpg",
+                title: "The Conjuring 2",
+                genre: "Horror, English",
+                overview: "Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.",
+            },
+            {
+                image: "premam-tn.jpg",
+                title: "Premam",
+                genre: "Comedy, Romance, Malayalam",
+                overview: "A young man has three opportunities to find love. Will the third time be the charm?",
+            },
+            {
+                image: "sr-tn.jpg",
+                title: "Sita Ramam",
+                genre: "Comedy, Romance, Telugu",
+                overview: "An orphan soldier, Lieutenant Ram's life changes, after he gets a letter from a girl named Sita. He meets her and love blossoms between them. When he comes back to his camp in Kashmir,After he gets caught in jail, he sends a letter to Sita which won't reach her.",
+            },
+            {
+                image: "adh-tn.jpg",
+                title: "Ae Dil Hai Mushkil",
+                genre: "Comedy, Romance, Hindi",
+                overview: "A passionate singer falls deeply in love with Alizeh, who only sees him as a friend. When she marries another man, he finds solace with Saba, but his heart remains torn between both women.",
+            },
+            {
+                image: "mlc-tn.jpg",
+                title: "Modern Love Chennai",
+                genre: "Love, Tamil",
+                overview: "An eclectic bouquet of six love stories irrespective of race, age, class and gender in the city of Chennai.",
+            },
+            {
+                image: "ft2-tn.jpg",
+                title: "Fingertip 2",
+                genre: "Crime Thriller, Tamil",
+                overview: "An eerie reminder of the destructive power of apps in the cyber world.",
+            },
+            {
+                image: "pr-tn.jpg",
+                title: "Paper Rocket",
+                genre: "Comedy, Tamil",
+                overview: "Six strangers go on a road trip across Tamil Nadu to get closure on their personal challenges. In the trip, each one wants to fulfil a major wish in their bucket list. But it's a bumpy ride. Will they be able to fulfil their wishes?",
+            },
+            {
+                image: "brinda-tn.jpg",
+                title: "Brinda",
+                genre: "Crime Thriller, Telugu",
+                overview: "A police officer becomes a ray of hope in the darkness of injustice and crime. While investigating, she unfolds various mysteries which challenge the longstanding societal beliefs and rituals.",
+            },
+            {
+                image: "farzi-tn.jpg",
+                title: "Farzi",
+                genre: "Crime, Drama, Hindi",
+                overview: "An artist who gets pulled into the murky high stakes of a con job and a fiery task force officer on the mission to rid the country of his menaces in a fast-paced, edgy one-of-a-kind thriller.",
+            },
+            {
+                image: "cj-tn.jpg",
+                title: "Criminal Justice",
+                genre: "Thriller, Hindi",
+                overview: "Sex, drugs and a gruesome murder. An edgy one night stand turns into a nightmare for Aditya, when he wakes up with blood on his hands. The evidence is stacked against him, but he doesn't remember the grisly crime.",
+            },
+            {
+                image: "13rw-tn.jpg",
+                title: "13 Reasons Why",
+                genre: "Romantic, English",
+                overview: "Follows teenager Clay Jensen, in his quest to uncover the story behind his classmate and crush, Hannah, and her decision to end her life.",
+            },
+            {
+                image: "mh-tn.jpg",
+                title: "Money Heist",
+                genre: "Thriller, English",
+                overview: "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
+            },
+            {
+                image: "bbad-tn.jpg",
+                title: "Breaking Bad",
+                genre: "Action, English",
+                overview: "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.",
+            },
+            {
+                image: "dark-tn.jpg",
+                title: "Dark",
+                genre: "Sci - Fi, English",
+                overview: "A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.",
+            },
+            {
+                image: "tj-tn.jpg",
+                title: "Tom and Jerry in New York",
+                genre: "Kids, English",
+                overview: "Follow the iconic cat and mouse duo as they settle in to their new digs at the Royal Gate Hotel and unleash mayhem across the big city, inciting hilarious chaos uptown, downtown and everywhere their manic escapades take them.",
+            },
+            {
+                image: "sd-tn.jpg",
+                title: "Scooby-Doo",
+                genre: "Adventure, English",
+                overview: "Solve the mystery of Kraken Cove with Scooby, Shaggy and the rest of the Mystery Machine Gang or help Bugs and Daffy discover who is behind the dastardly defective MOCME products that are creating chaos.",
+            },
+            {
+                image: "sc-tn.jpg",
+                title: "Shin Chan",
+                genre: "Kids, Tamil",
+                overview: "The show follows the adventures of Shin-chan, a mischievous five-year-old who wreaks havoc with his unique perspective.",
+            },
+            {
+                image: "sm-tn.jpg",
+                title: "Spiderman",
+                genre: "Adventure, Tamil",
+                overview: "Marvel's Spider-Man is an animated series centered around Peter Parker's journey to becoming Spider-Man, focusing on his high school life and struggles while fighting crime.",
+            },
+        ];
+
+
+
+
+        function searchMovies() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var resultArea = document.getElementById("resultArea");
+            resultArea.innerHTML = "";
+            var found = false;
+
+            for (var i = 0; i < movieList.length; i++) {
+                var movie = movieList[i];
+                var title = movie.title.toLowerCase();
+
+                if (title.indexOf(input) !== -1) {
+                    resultArea.innerHTML += `
+                <div class="item-lr">
+                    <div onclick="moviedetails(this)">
+                        <img src="${movie.image}">
+                        <div class="titlecont">
+                            <div class="title">
+                                <b>${movie.title}</b> <br>
+                                ${movie.genre}
+                                <p>${movie.overview}</p>
+                            </div>
+                            <div class="wlist">
+                                <i class="far fa-heart fa-lg heart" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                resultArea.innerHTML = "<p> No Result Found. </p>";
+            }
+        }
+
+        function moviedetails(details) {
+            const moviename = details.parentElement.querySelector('b').innerText;
+            window.location.href = moviename + ".html";
+        }
+
+    </script>
+
+</body>
+
+</html>

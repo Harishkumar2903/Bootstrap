@@ -1,0 +1,166 @@
+<input type="text" id="searchInput" placeholder="Search movie...">
+<button onclick="searchMovie()">Search</button>
+
+<div class="result" id="resultArea"></div>
+
+
+<script>
+  var movieList = [
+    {
+      title: "Soorarai Pottru",
+      genre: "Action | Tamil",
+      description: "A determined villager challenges the aviation industry's elite by pursuing his vision of affordable air travel for all, despite numerous obstacles and setbacks",
+      image: "sp thumbnail.jpg",
+      page: "Movies.html"
+    },
+    {
+      title: "Dark",
+      genre: "Thriller | German",
+      description: "A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the double lives of four families.",
+      image: "dark.jpg",
+      page: "WebSeries.html"
+    }
+    // Add more movie objects...
+  ];
+
+  function searchMovie() {
+    var input = document.getElementById("searchInput").value.toLowerCase();
+    var resultArea = document.getElementById("resultArea");
+    resultArea.innerHTML = "";
+    var found = false;
+
+    for (var i = 0; i < movieList.length; i++) {
+      var movie = movieList[i];
+      var title = movie.title.toLowerCase();
+
+      if (title.indexOf(input) !== -1) {
+        resultArea.innerHTML += `
+          <div class="item-lr">
+            <div onclick="moviedetails(this)">
+              <img src="${movie.image}">
+              <div class="titlecont">
+                <div class="title">
+                  <b>${movie.title}</b><br>
+                  ${movie.genre}
+                  <p>${movie.description}</p>
+                </div> 
+                <div class="wlist">
+                  <i class="far fa-heart fa-lg heart" aria-hidden="true"></i>
+                </div>
+              </div> 
+            </div>
+          </div>
+        `;
+        found = true;
+      }
+    }
+
+    if (!found) {
+      resultArea.innerHTML = "<p>No results found.</p>";
+    }
+  }
+</script>
+
+
+
+get data from div elements
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Movie Search</title>
+  <script src="https://kit.fontawesome.com/8c88d9587a.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    .movie-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      display: block;
+      background-color: #f9f9f9;
+    }
+
+    .movie-card img {
+      width: 100px;
+      float: left;
+      margin-right: 15px;
+    }
+
+    .movie-card b {
+      font-size: 18px;
+    }
+
+    .movie-details {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><i class="fa-solid fa-magnifying-glass"></i> Search Movies / Web Series</h2>
+
+  <input type="text" id="searchInput" onkeyup="filterMovies()" placeholder="Type movie name...">
+
+  <div class="movie-card" data-title="soorarai pottru">
+    <img src="sp thumbnail.jpg" alt="Soorarai Pottru">
+    <div class="movie-details">
+      <b>Soorarai Pottru</b><br>
+      Action | Tamil
+      <p>A determined villager challenges the aviation industry's elite by pursuing his vision of affordable air travel for all.</p>
+    </div>
+  </div>
+
+  <div class="movie-card" data-title="dark">
+    <img src="dark.jpg" alt="Dark">
+    <div class="movie-details">
+      <b>Dark</b><br>
+      Thriller | German
+      <p>A family saga with a supernatural twist, set in a German town where two children go missing.</p>
+    </div>
+  </div>
+
+  <div class="movie-card" data-title="inception">
+    <img src="inception.jpg" alt="Inception">
+    <div class="movie-details">
+      <b>Inception</b><br>
+      Sci-Fi | English
+      <p>A thief who steals corporate secrets through dreams is given a task of planting an idea in a CEO's mind.</p>
+    </div>
+  </div>
+
+  <script>
+    function filterMovies() {
+      var input = document.getElementById("searchInput").value.toLowerCase();
+      var cards = document.getElementsByClassName("movie-card");
+
+      for (var i = 0; i < cards.length; i++) {
+        var title = cards[i].getAttribute("data-title").toLowerCase();
+        if (title.indexOf(input) !== -1) {
+          cards[i].style.display = "block";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+

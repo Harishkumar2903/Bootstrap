@@ -1,0 +1,447 @@
+<html>
+    <head>
+        <title>CINEPHILE</title>
+        <script src="https://kit.fontawesome.com/8c88d9587a.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="D:\Web Development\V S CODE\FRONTEND PROJECT\index.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        
+        <ul class="navbar flex">
+            <div class="navitem">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i><span class="nav-name">Home</span></a></li>
+            <li><a href="Movies.html"><i class="fa-solid fa-film"></i><span class="nav-name">Movies</span></a></li>
+            <li><a href="WebSeries.html"><i class="fa-solid fa-video"></i><span class="nav-name">Web Series</span></a></li>
+            <li><a href="Wishlists.html"><i class="fa-solid fa-heart"></i><span class="nav-name">Wishlists</span></a></li>
+            <li><a href="Search.html"><i class="fa-solid fa-magnifying-glass"></i><span class="nav-name">Search</span></a></li>
+            <li><a href="Subscriptions.html"><i class="fa-solid fa-crown"></i><span class="nav-name">Subscriptions</span></a></li>
+            <li><a href="SignUpPage.html"><i class="fa-solid fa-circle-user"></i><span class="nav-name">Sign In</span></a></li>
+            </div>
+        </ul>
+        
+        <div class="flex">  
+        <h2 class="sitename"><img src="logo90.png">CINEPHILE</h2>
+        <div id="carouselExampleCaptions" class="carousel slide cont-carousel " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="4000">
+                <img src="okk-poster.jpg" class="d-block w-100" alt="Movie1">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>O Kadhal Kanmani</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="brama-poster.jpg" class="d-block w-100" alt="Movie2">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Bramayugam</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="farzi-poster.jpg" class="d-block w-100" alt="Movie3">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Farzi</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="13rw-poster.jpg" class="d-block w-100" alt="Movie4">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>13 Reasons Why</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="4000">
+                <img src="tj-poster.jpg" class="d-block w-100" alt="Movie5">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Tom and Jerry in New York</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        </div>
+
+        <section class="cont-lr">
+            <h4 class="flex">New Release Movies</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="sp thumbnail.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Soorarai Pottru</b><br>
+                        <span>Action, Tamil</span>
+                        <p>A determined villager challenges the aviation industry's elite by pursuing his vision of affordable air travel for all, despite numerous obstacles and setbacks</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="hit thumbnail.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>HIT - The Third Case</b><br>
+                        <span>Crime Thriller, Telugu</span>
+                        <p>Arjun Sarkaar, a top HIT officer from Visakhapatnam, is sent to Jammu and Kashmir to investigate a series of brutal murders. As he pursues a group of elusive killers, the case tests his skills and mental strength.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="hf-thumbnail.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Housefull 5</b><br>
+                        <span>Comedy, Romance, Hindi</span>
+                        <p>Three couples who get separated from each other due to an evil ploy, reincarnate after 600 years and meet each other as history repeats itself again and their respective partners get mixed up this time.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="fx-thumbnail.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Fast X</b><br>
+                        <span>Action, English</span>
+                        <p>Dom Toretto and his family are targeted by the vengeful son of drug kingpin Hernan Reyes.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>  
+            </div>
+        </section>
+
+        <section class="cont-lr">
+            <h4 class="flex">New Web Series</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr"  id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="suzhal2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Suzhal 2 - The Vortex</b><br>
+                        <span>Thriller, Tamil</span>
+                        <p>In a small South Indian town, a seemingly routine minor case explodes into a twisted crime thriller that rips apart its social fabric.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div> 
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="luc-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Love Under Construction</b><br>
+                        <span>Comedy, Malayalam</span>
+                        <p>Vinod is ready to build his dream house. But is he ready to face the hurdles in his path?</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr"  id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="dabba-cartel-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Dabba Cartel</b><br>
+                        <span>Crime, Drama, Hindi</span>
+                        <p>In VivaLife Society, men and women lead parallel lives - one caught in a pharma investigation, the other in drug peddling through a dabba delivery business.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr"  id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="sg2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Squid Game 2</b><br>
+                        <span>Thriller, English</span>
+                        <p>Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes 45.6 billion-won prize at stake.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+        <section class="cont-lr">
+            <h4 class="flex">Top Rated Movies</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="yn-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Yaavarum Nalam</b><br>
+                        <span>Horror, Tamil</span>
+                        <p> When an engineer and family move into a new apartment on the 13th floor, he comes across a daily soap on TV that closely mirrors the happenings in his household.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div> 
+                <div class="item-lr" id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="ave-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Aavesham</b><br>
+                        <span>Action, Malayalam</span>
+                        <p>Three teenagers reach Bangalore for their engineering degree and gets involved in a fight with seniors. They find a local gangster named Ranga to help them take revenge.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="chup-tn1.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Chup</b><br>
+                        <span>Crime Thriller, Hindi</span>
+                        <p>A lonesome florist with a new-found love interest and a psychopath killer who targets film critics in Mumbai. Are the two related? Inspector Arvind Mathur and Dr. Zenobia are about to find out.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="tit-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Titanic</b><br>
+                        <span>Rom - Com, English</span>
+                        <p>A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>  
+            </div>
+        </section>
+
+        <!-- <section class="cont-lr">
+            <h4 class="flex">Watchlists</h4>
+            <h5  class="flex">Watch Movie Trailers to add Watchlists</h5>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="suzhal2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Suzhal 2 - The Vortex</b><br>
+                        <span>Action, Tamil</span>
+                        <p>In a small South Indian town, a seemingly routine minor case explodes into a twisted crime thriller that rips apart its social fabric.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div> 
+                <div class="item-lr"  id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="luc-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Love Under Construction</b><br>
+                        <span>Comedy, Malayalam</span>
+                        <p>Vinod is ready to build his dream house. But is he ready to face the hurdles in his path?</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="dabba-cartel-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Dabba Cartel</b><br>
+                        <span>Crime, Drama, Hindi</span>
+                        <p>In VivaLife Society, men and women lead parallel lives - one caught in a pharma investigation, the other in drug peddling through a dabba delivery business.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="sg2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Squid Game 2</b><br>
+                        <span>Thriller, English</span>
+                        <p>Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes 45.6 billion-won prize at stake.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>  
+            </div>
+        </section> -->
+        
+        <footer class="flex">
+            <ul class="footeritem">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Support Us</a></li>
+            </ul>
+            <div class="footeritem">
+                <h4>Follow Us</h4>
+                <i class="fa-brands fa-x-twitter fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-square-facebook fa-xl"></i>
+            </div>
+            <ul class="footeritem">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><i class="fa-regular fa-copyright"></i>2025 All Rights Reserved</li>
+            </ul>
+        </footer>
+        
+<script>
+    function moviedetails(details){
+        const moviename = details.parentElement.querySelector('b').innerText;
+        window.location.href = moviename+".html";
+    }
+//  $(document).ready(function() {                     ---- Original Script -----
+//        $(".heart").click(function() {
+//            $(this).toggleClass("far fas");
+//             event.target.style.color="red";
+// });
+// });
+
+//    $(document).ready(function() {
+//        $(".heart").click(function() {
+//            $(this).toggleClass("far fas");
+//             event.target.style.color="red";
+//             const card = event.target.parentElement.parentElement.parentElement;
+//             const name = card.querySelector("b").innerText;
+//             const genre = card.querySelector("span").innerText;
+//             const imag = card.querySelector("img").src;
+//             const overview = card.querySelector("p").innerText;
+//             console.log(name);
+//             console.log(genre);
+//             console.log(imag);
+//             console.log(overview);
+
+//             localStorage.setItem("image",imag);
+//             localStorage.setItem("title",name);
+//             localStorage.setItem("category",genre);
+//             localStorage.setItem("description",overview);
+//  });
+// });
+
+    
+
+
+//  document.addEventListener("click", function(e) {
+//       if (e.target.classList.contains("heart")) {
+//         let heart = e.target;
+//         let id = heart.getAttribute("data-id");
+
+//         // Go up to find the card
+//         let card = heart.closest(".item-lr");
+//         let img = card.querySelector("img").src;
+//         let title = card.querySelector("b").innerText;
+//         let category = card.querySelector("span").innerText;
+//         let desc = card.querySelector("p").innerText;
+//         console.log(card);
+//         console.log(img);
+//         console.log(title);
+//         console.log(category);
+//         console.log(desc);
+
+//         let key = "movie_" + id;
+
+//         if (localStorage.getItem(key)) {
+//           localStorage.removeItem(key);
+//           heart.classList.remove("saved");
+//         } else {
+//           localStorage.setItem(key, img + "|" + title + "|" + category + "|" + desc);
+//           heart.classList.add("saved");
+//         }
+//       }
+//     });
+
+//     // Load saved state on page load
+//     window.addEventListener("DOMContentLoaded", () => {
+//       document.querySelectorAll(".heart").forEach(heart => {
+//         let id = heart.getAttribute("data-id");
+//         if (localStorage.getItem("movie_" + id)) {
+//           heart.classList.add("saved");
+//         }
+//       });
+//     });
+  
+
+let count = parseInt(localStorage.getItem("count")) || 0;
+
+function addToWishlist(icon) {
+    const card = icon.closest(".item-lr"); // This gets the outer movie card
+
+    const img = card.querySelector("img")?.src || "";
+    const title = card.querySelector("b")?.innerText || "";
+    const category = card.querySelector("span")?.innerText || "";
+    const desc = card.querySelector("p")?.innerText || "";
+
+    console.log(title);
+
+    if (img === "" || title === "") {
+        alert("Movie data missing!");
+        return;
+    }
+
+    const movieData = img + "|" + title + "|" + category + "|" + desc;
+    
+    let count = parseInt(localStorage.getItem("count")) || 0;
+    localStorage.setItem("movie_" + count, movieData);
+    count++;
+    localStorage.setItem("count", count);
+
+    icon.classList.remove("far");
+    icon.classList.add("fas");
+
+    console.log("Saved image URL:", img);
+}
+
+
+
+</script>
+        
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>      
+</body>
+</html>

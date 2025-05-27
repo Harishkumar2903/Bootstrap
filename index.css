@@ -1,0 +1,352 @@
+body{           
+    margin: 0;
+    padding: 0;
+    /* background: linear-gradient(to right,rgb(4, 78, 103) ,gray  ,rgb(129, 87, 10)); */
+    /* background: linear-gradient(to right,rgb(116, 213, 245) ,whitesmoke  ,rgb(240, 196, 114)); */
+    /* background: linear-gradient(to right,rgb(0, 0, 0) ,rgb(75, 72, 72)  ,rgb(125, 125, 125)); */
+    /* background-color: rgb(125, 125, 125); */
+    background-color: #F3EFE0;
+    
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 100%;
+    /* background-color: rgb(55, 55, 55);   */
+    position: fixed; 
+    align-content: start;
+}
+
+.navbar:hover{
+    background-color: #434242;
+    width: 200px;
+    z-index: 2;
+    transition-duration: 1s;
+    display: block;
+    .nav-name{
+        padding-top: 5px;
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        color: #F3EFE0;
+    }
+}
+.navitem{
+    list-style-type: none;
+    padding-top: 5px;
+}
+
+.navitem li a{
+    text-decoration: none;
+    display: block;
+    padding: 20px 20px;
+    text-align: center;
+    color: #697565;
+    margin: 0px;
+}
+
+.navitem li a:hover{
+    background-color: black;
+}
+.nav-name {
+      margin-left: 10px;
+      white-space: nowrap;
+      display: none;
+}
+
+.sitename{
+    position: fixed;
+    top: 10px;
+    right: 40px;
+    z-index: 1;
+    color:#434242;
+    text-shadow: 5px 5px 5px;
+    font-size: xxx-large;
+}
+
+.searchbar{
+    margin: 60px;
+    padding: 30px;
+    flex: 1;
+}
+.searchbar input{
+    width: 75%;
+    height: 100px;
+    border-radius: 20px 0px 0px 20px;
+    text-align: center;
+    z-index: 1;
+    font-size: xxx-large;
+    box-shadow: 0px 10px 40px rgb(55, 55, 55);
+    border-spacing: 200px;
+}
+.searchbar button{
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 10px 10px 40px rgb(55, 55, 55);
+    font-size: x-large;
+    padding: 20px;
+    background-color: darkgray;
+    color: rgb(55, 55, 55);
+}
+
+.cont-carousel{
+    width: 100%;
+    margin: 80px 80px 0px;
+}
+
+.cont-lr{
+    margin: 30px 0px;
+    /* margin-left: 60px; */
+    /* background-color: aquamarine;  */
+}
+
+.cardcont-lr{
+    margin: 20px 0px;
+    column-gap: 40px;
+    row-gap: 50px;
+    /* background-color: bisque;  */
+}
+
+.item-lr{
+    width: 280px;
+    height: 400px;
+    /* background-color: blue; */
+    border-radius: 5px;
+    margin: 3px;  
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 7px 7px 20px black;
+}
+
+.item-lr:hover, .footeritem li:hover, .footeritem i:hover, .subtable button:hover{
+    transform: scale(1.05);
+    transition-duration: 0.25s;
+}
+
+.titlecont{
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.titlecont:hover{
+    /* height: 250px; */
+    z-index: 2;
+    transition-duration: 2s;
+    background-color: lightgray;
+    transform: translateY(-76%);
+    /* .wlist{
+    height: 100%;
+    position: relative;
+    top: 30px;
+    color: gray;
+} */
+}
+
+.title{
+    /* padding-left: 30px; */
+    color: #434242;  
+    float: left;
+}
+    
+.title b{
+    font-size:large;
+}
+.title p{
+    padding: 0px;
+    text-align: justify;
+}
+.wlist {
+    color: gray;
+    position: relative;
+   padding: 20px 0px 0px 10px;
+}
+
+.subscriptions{
+    margin: 80px;
+    width: 90%;
+}
+.subtable{
+    width: 70%;
+    text-align: center;
+    line-height: 25px;
+    background-color: gray;
+    border-color: #434242;
+}
+.subtable button{
+    width: 80px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #434242;
+    color: darkgray;
+    box-shadow: 1px 1px 20px #434242;
+}
+
+footer{
+    background-color: #434242;
+    color: #F3EFE0;
+    column-gap: 200px;
+    padding: 30px;
+}
+.main-content {
+      flex: 1;
+    }
+.footeritem{
+    list-style-type: none;
+}
+
+.footeritem li, .footeritem i{
+    padding: 10px;
+    text-align: center;
+}
+.footeritem a{
+    margin: 10px;
+    text-decoration: none;
+    color: #F3EFE0;
+}
+
+.poster{
+    margin: 50px 0px;
+}
+
+.details{
+    width: 95%;
+    margin-left: 2.5%;
+    text-align: center;
+}
+.details button{
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #434242;
+    color: darkgray;
+    margin:30px;
+}
+
+.trailer{
+    display: none;
+    margin-bottom: 60px;
+    border-radius: 20px;
+}
+
+.details button:active{
+    transform: scale(0.95);
+    transition-duration: 0.25s;
+}
+
+.signinpage{
+    width: 65%;
+    height: 80%;
+    margin: 90px 0px;
+    position: relative;
+    justify-self: center;
+    /* background: linear-gradient(to right,rgb(240, 196, 114) ,whitesmoke  ,rgb(116, 213, 245)); */
+    background-color:#F3EFE0;
+    border-radius: 5px; 
+    box-shadow: 7px 7px 50px #434242;
+}
+.movingcard{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    /* background: linear-gradient(to right,rgb(240, 196, 114),whitesmoke); */
+    background-color:#697565;
+    border-radius: 5px;
+    transition: transform 1.2s ease-in-out;
+}
+.slide-active {
+    transform: translateX(100%) ;
+    /* background: linear-gradient(to right,whitesmoke  ,rgb(116, 213, 245)); */
+}
+.signinpage .rightslide{
+    width: 50%;
+    height: 100%; 
+    position: absolute; 
+    /* background-color: aquamarine; */
+    right: 0;
+}
+.signinpage .leftslide{
+    left: 0;
+    width: 50%; 
+    height: 100%; 
+    position: absolute; 
+    text-align: left;
+}
+.signinpage h1{
+    padding: 30px 30px 0px;
+    text-align: center;
+}
+.rightslide label{
+    margin: 20px;
+    padding-left: 20px;
+    font-size:xx-large;
+}
+.rightslide input, .rightslide button{
+    margin: 0px 0px 0px 40px;
+    width: 80%;
+    height: 8%;
+    border-radius: 5px;
+    background-color:lightgray;
+    color: whitesmoke;
+}
+.rightslide button{
+    font-size: x-large;
+    background-color:#434242;
+}
+.rightslide p{
+    padding: 5px 60px;
+    text-align: right;
+}
+.leftslide label{
+    margin: 5px 20px;
+    font-size:large;
+}
+.leftslide input, .leftslide button{
+    margin: 0px 0px 0px 20px;
+    width: 80%;
+    height: 7%;
+    border-radius: 5px;
+    background-color:lightgray;
+    color: whitesmoke;
+}
+.leftslide button{
+    margin-top: 30px;
+    font-size: large;
+    background-color:#434242;
+}
+.formcontrol.error input{
+    background-color: rgb(121, 74, 74);
+}
+.formcontrol.success input{
+    background-color: rgb(97, 131, 97);
+}
+ .formcontrol.success i{
+    visibility: visible;
+    color: rgb(97, 131, 97);
+ }
+
+.formcontrol small{
+    margin: 0px 0px 0px 20px;
+    visibility: hidden;
+}
+ .formcontrol i{
+    visibility: hidden;
+ }
+.formcontrol.error small{
+    visibility: visible;
+    color: rgb(121, 4, 4);
+}
+.rightslide small{
+    margin: 0px 40px;
+    visibility: hidden;
+}

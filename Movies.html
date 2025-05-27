@@ -1,0 +1,379 @@
+<html>
+<head>
+    <title>Movies</title>
+    <script src="https://kit.fontawesome.com/8c88d9587a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="D:\Web Development\V S CODE\FRONTEND PROJECT\index.css">
+</head>
+
+<body>
+
+    <ul class="navbar flex">
+        <div class="navitem">
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\index.html"><i class="fa-solid fa-house"></i><span class="nav-name">Home</span></a></li>
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Movies.html"><i class="fa-solid fa-film"></i><span class="nav-name">Movies</span></a></li>
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\WebSeries.html"><i class="fa-solid fa-video"></i><span class="nav-name">Web Series</span></a></li>
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Wishlists.html"><i class="fa-solid fa-heart"></i><span class="nav-name">Wishlists</span></a></li>
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Search.html"><i class="fa-solid fa-magnifying-glass"></i><span class="nav-name">Search</span></a></li>
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\Subscriptions.html"><i class="fa-solid fa-crown"></i><span class="nav-name">Subscriptions</span></a></li>
+            <li><a href="D:\Web Development\V S CODE\FRONTEND PROJECT\SignUpPage.html"><i class="fa-solid fa-circle-user"></i><span class="nav-name">Sign In</span></a></li>
+        </div>
+    </ul>
+
+    <div class="flex">
+        <h2 class="sitename"><img src="logo90.png">CINEPHILE</h2>
+    </div>   
+
+        <section class="cont-lr" style="margin-top: 60px;">
+            <h4 class="flex">Kollywood Movies</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="sp thumbnail.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Soorarai Pottru</b><br>
+                        <span>Action, Tamil</span>
+                        <p>A determined villager challenges the aviation industry's elite by pursuing his vision of affordable air travel for all, despite numerous obstacles and setbacks</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="d16-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Dhuruvangal Pathinaaru - D16</b><br>
+                        <span>Crime Thriller, Tamil</span>
+                        <p>A police officer retires after an accident during a case investigation. Years later, he is forced to relive the past as he narrates the story to his friend's son.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="yn-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Yaavarum Nalam</b><br>
+                        <span>Horror, Tamil</span>
+                        <p> When an engineer and family move into a new apartment on the 13th floor, he comes across a daily soap on TV that closely mirrors the happenings in his household.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="okk-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>O Kadhal Kanmani</b><br>
+                        <span>Rom - Com, Tamil</span>
+                        <p>Two young lovers are compatible in every way - they even agree that marriage is futile. However, their emotions are not so easily managed, especially when they witness the unconditional love of the older couple with whom they live.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>  
+            </div>
+        </section>
+
+        <section class="cont-lr" style="margin-top: 60px;">
+            <h4 class="flex">Action Drama</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="ave-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Aavesham</b><br>
+                        <span>Action, Malayalam</span>
+                        <p>Three teenagers reach Bangalore for their engineering degree and gets involved in a fight with seniors. They find a local gangster named Ranga to help them take revenge.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="b2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Baahubali 2- The Conclusion</b><br>
+                        <span>Action, Telugu</span>
+                        <p>Amarendra Baahubali, the heir apparent to the throne of Mahishmati, finds his life and relationships endangered as his adoptive brother Bhallaladeva conspires to claim the throne.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="bb-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Bang Bang</b><br>
+                        <span>Action, Hindi</span>
+                        <p>A young bank receptionist gets mixed up with Rajveer Nanda, a man who has a mysterious background.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie1">
+                    <div onclick="moviedetails(this)">
+                    <img src="jw4-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>John Wick- Chapter 4</b><br>
+                        <span>Action, English</span>
+                        <p>John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div> 
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+        <section class="cont-lr" style="margin-top: 60px;">
+            <h4 class="flex">Crime Thriller</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="d2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Drishyam 2</b><br>
+                        <span>Crime Thriller, Malayalam</span>
+                        <p>A man goes to extreme lengths to save his family from punishment after the family commits an accidental crime.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="hit thumbnail.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>HIT - The Third Case</b><br>
+                        <span>Crime Thriller, Telugu</span>
+                        <p>Arjun Sarkaar, a top HIT officer from Visakhapatnam, is sent to Jammu and Kashmir to investigate a series of brutal murders. As he pursues a group of elusive killers, the case tests his skills and mental strength.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="chup-tn1.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Chup</b><br>
+                        <span>Crime Thriller, Hindi</span>
+                        <p>A lonesome florist with a new-found love interest and a psychopath killer who targets film critics in Mumbai. Are the two related? Inspector Arvind Mathur and Dr. Zenobia are about to find out.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="follow-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Following</b><br>
+                        <span>Crime Thriller, English</span>
+                        <p>A mystery thriller about a real estate agent who secretly enters clients' homes and becomes obsessed with a deceptive social media influencer. The film explores themes of obsession, identity and the dark side of social media.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>  
+            </div>
+        </section>
+
+        <section class="cont-lr" style="margin-top: 60px;">
+            <h4 class="flex">Horror</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="andha-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Andhaghaaram</b><br>
+                        <span>Horror, Tamil</span>
+                        <p>As a blind librarian, dispirited cricketer and desolate psychiatrist each seek retribution and release, their lives overlap under eerie influences.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="brama-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Bramayugam</b><br>
+                        <span>Horror, Malayalam</span>
+                        <p>Thevan, a folk singer of the Paanan caste, has a fateful encounter when escaping slavery, leading to him discovering an ancient traditional mansion altering his destiny.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="tum-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Tumbbad</b><br>
+                        <span>Horror, Hindi</span>
+                        <p>A mythological story about a goddess who created the entire universe. The plot revolves around the consequences when humans build a temple for her first-born.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="co2-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>The Conjuring 2</b><br>
+                        <span>Horror, English</span>
+                        <p>Ed and Lorraine Warren travel to North London to help a single mother raising four children alone in a house plagued by a supernatural spirit.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>  
+            </div>
+        </section>
+
+        <section class="cont-lr" style="margin-top: 60px;">
+            <h4 class="flex">Rom - Com</h4>
+            <div class="cardcont-lr flex">
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="premam-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Premam</b><br>
+                        <span>Rom - Com, Malayalam</span>
+                        <p>A young man has three opportunities to find love. Will the third time be the charm?</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie2">
+                    <div onclick="moviedetails(this)">
+                    <img src="sr-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Sita Ramam</b><br>
+                        <span>Rom - Com, Telugu</span>
+                        <p>An orphan soldier, Lieutenant Ram's life changes, after he gets a letter from a girl named Sita. He meets her and love blossoms between them. When he comes back to his camp in Kashmir,After he gets caught in jail, he sends a letter to Sita which won't reach her.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>
+                <div class="item-lr" id="movie3">
+                    <div onclick="moviedetails(this)">
+                    <img src="adh-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Ae Dil Hai Mushkil</b><br>
+                        <span>Comedy, Romance, Hindi</span>
+                        <p>A passionate singer falls deeply in love with Alizeh, who only sees him as a friend. When she marries another man, he finds solace with Saba, but his heart remains torn between both women.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div>
+                </div>
+                <div class="item-lr" id="movie4">
+                    <div onclick="moviedetails(this)">
+                    <img src="tit-tn.jpg">
+                    <div class="titlecont ">
+                        <div class="title">
+                        <b>Titanic</b><br>
+                        <span>Rom - Com, English</span>
+                        <p>A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</p>
+                        </div> 
+                        <i onclick="addToWishlist(this)" class="far fa-heart fa-lg heart wlist" aria-hidden="true"></i>
+                    </div>
+                    </div> 
+                </div>  
+            </div>
+        </section>
+
+
+        <footer class="flex">
+            <ul class="footeritem">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Support Us</a></li>
+            </ul>
+            <div class="footeritem">
+                <h4>Follow Us</h4>
+                <i class="fa-brands fa-x-twitter fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-square-facebook fa-xl"></i>
+            </div>
+            <ul class="footeritem">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><i class="fa-regular fa-copyright"></i>2025 All Rights Reserved</li>
+            </ul>
+        </footer>
+
+
+<script>
+
+    function moviedetails(details){
+        const moviename = details.parentElement.querySelector('b').innerText;
+        window.location.href = moviename+".html";
+    }
+
+
+    let count = parseInt(localStorage.getItem("count")) || 0;
+
+    function addToWishlist(icon) {
+    const card = icon.closest(".item-lr"); // This gets the outer movie card
+
+    const img = card.querySelector("img")?.src || "";
+    const title = card.querySelector("b")?.innerText || "";
+    const category = card.querySelector("span")?.innerText || "";
+    const desc = card.querySelector("p")?.innerText || "";
+
+    console.log(title);
+
+    if (img === "" || title === "") {
+        alert("Movie data missing!");
+        return;
+    }
+
+    const movieData = img + "|" + title + "|" + category + "|" + desc;
+    
+    let count = parseInt(localStorage.getItem("count")) || 0;
+    localStorage.setItem("movie_" + count, movieData);
+    count++;
+    localStorage.setItem("count", count);
+
+    icon.classList.remove("far");
+    icon.classList.add("fas");
+
+    console.log("Saved image URL:", img);
+}
+
+</script>
+
+</body>
+</html>

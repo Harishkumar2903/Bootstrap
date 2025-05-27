@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Overlapping Navbar with z-index</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      position: fixed;      /* sits on top */
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 100vh;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      transition: width 0.3s;
+      overflow: hidden;
+      z-index: 999;         /* sits above everything else */
+    }
+
+    .navbar:hover {
+      width: 200px;
+    }
+
+    .nav-item {
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-name {
+      margin-left: 10px;
+      white-space: nowrap;
+    }
+
+    .carousel {
+      margin-left: 60px; /* leave space for navbar */
+      padding: 30px;
+      background-color: #f5f5f5;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-item"><span>🏠</span><span class="nav-name">Home</span></div>
+    <div class="nav-item"><span>ℹ️</span><span class="nav-name">About</span></div>
+    <div class="nav-item"><span>📞</span><span class="nav-name">Contact</span></div>
+  </div>
+
+  <div class="carousel">
+    <h1>Carousel Area</h1>
+    <p>This content will be *under* the navbar if it overlaps.</p>
+  </div>
+
+</body>
+</html>
