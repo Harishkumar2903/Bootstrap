@@ -71,7 +71,13 @@
                 <button>SIGN IN</button>
                 <p style="text-align: center;">Didn't have an Account? Register</p>
         </form>
-        <div class="movingcard" id="cardslide" onclick="slide()"></div>
+        <div class="movingcard"  id="cardslide">
+            <div class="carddetails">
+                <h5>Don't have an Account !!</h5>
+                <h1>Create Your Acount</h1>
+                <button onclick="slide()" >SIGN UP</button>
+            </div>
+        </div>
     </div>
 
 
@@ -105,6 +111,22 @@
     var cardslide = document.getElementById("cardslide");
     function slide() {
         cardslide.classList.toggle("slide-active");
+        
+        const h5 = document.querySelector(".carddetails h5");
+        const h1 = document.querySelector(".carddetails h1");
+        const button = document.querySelector(".carddetails button");
+
+        if ( h5.innerText == "Don't have an Account !!"){
+            h5.innerText = "Already have an Account !!";
+            h1.innerText = "Sign into Your Account";
+            button.innerText = "SIGN IN";
+        }
+        else{
+            h5.innerText = "Don't have an Account !!";
+            h1.innerText = "Create Your Account";
+            button.innerText = "SIGN UP";
+        }
+        
     }
 
     const formleft = document.getElementById("formleft");

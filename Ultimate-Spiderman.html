@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Ultimate-Spiderman</title>
+    <script src="https://kit.fontawesome.com/8c88d9587a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+   
+</head>
+
+<body>
+
+ <div class="flex">
+        <h2 class="sitename"><img src="logo90.png">CINEPHILE</h2>
+</div>
+
+
+
+<div class="details"><br>
+    <div class="flex"><img class="poster" src="sm-poster.jpg">
+</div>
+    <h1>Ultimate-Spiderman</h1>
+    <p>It's been a year, and Spider-Man is still finding the superhero life is full of dangerous pitfalls and avoidable collateral damage. Fortunately, Nick Fury, Director of S.H.I.E.L.D., offers to fix that with a special training program that offers to make Peter Parker the Ultimate Spider-man. Now the quintessential superhero loner must learn to get along with a new team of superheroes as fellow students, both in his professional and personal life. Between those demands and the supervillains, life is as hectic as ever for the Webslinging Wonder.</p>
+    <p><b>Genre :</b> Adventure</p>
+    <p><b>Language :</b> Tamil</p>
+    <h1>Cast & Crew</h1>
+    <p>Drake Bell, Ogie Banks, Chi McBride, directed by Todd McFarlane, David Michelinie, Bill Mantlo</p>
+    <h1>Rating : <i class="fa-solid fa-star fa-sm"></i>&nbsp;<i class="fa-solid fa-star fa-sm"></i>&nbsp;<i class="fa-solid fa-star fa-sm"></i>&nbsp;<i class="fa-solid fa-star fa-sm"></i>&nbsp;<i class="fa-solid fa-star fa-sm"></i></h1>
+    <button class="showtrailer" data-target="showcontent1" >Movie Trailer</button><br>
+    <iframe id="showcontent1" class="trailer" width="800" height="450" src="https://www.youtube.com/embed/jKuLR5KCiY0?si=IzOajzkxwt0cs8I0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<footer class="flex">
+            <ul class="footeritem">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Support Us</a></li>
+            </ul>
+            <div class="footeritem">
+                <h4>Follow Us</h4>
+                <i class="fa-brands fa-x-twitter fa-xl"></i>
+                <i class="fa-brands fa-instagram fa-xl"></i>
+                <i class="fa-brands fa-square-facebook fa-xl"></i>
+            </div>
+            <ul class="footeritem">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><i class="fa-regular fa-copyright"></i>2025 All Rights Reserved</li>
+            </ul>
+</footer>
+
+<script>
+    
+    function trailer(event){
+        // console.log(event.target.textContent)
+        event.target.style.backgroundColor = "black"
+        const targetId = event.target.getAttribute("data-target")
+        $("#" + targetId).toggle(500)
+    }
+        $(document).ready(function(){
+            $(".showtrailer").click(trailer);
+               
+        });
+
+</script>
+
+</body>
+</html>
